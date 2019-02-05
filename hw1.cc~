@@ -1,0 +1,26 @@
+//Name:	Bryan Long
+//Program: FB project2
+//Description:	This is the implementation for the Friend class
+//Date: 9/30/18
+
+
+
+#include "hw1.h"
+
+string replace(string bing, const string& morg,const string& rewritten)
+
+{
+
+	size_t mom = 0;
+
+   	while ((mom = bing.find(morg, mom)) != string::npos)
+	{
+
+         	bing.replace(mom, morg.length(), rewritten);
+
+        	mom += rewritten.length();
+
+    	}
+
+    	return bing;
+}
